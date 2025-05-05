@@ -1,0 +1,19 @@
+server:
+    port: 8080
+    servlet:
+        context-path: /home
+
+spring:
+    datasource: &jdbc
+        url: jdbc:mysql://localhost:3306/Appchat
+        username: root
+        password: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+jwt:
+    singer_key: "CgxzvWVgdWOylFyaFuosUpz4Qxe5M8LjbzRhEeOGPtQSDhzjobt+OewZaCS6z1Ws"
+
+
+  

@@ -1,0 +1,47 @@
+package com.chat.chatapp.entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+public class User {
+    @Id 
+    @GeneratedValue(strategy = GenerationType.UUID)
+     String userId;     
+     String fullName;    
+     String password;
+     String email;
+     String phone;
+     Date dateOfBirth; 
+     boolean isActive;    
+
+     Set<String> roles;
+
+     @OneToMany(mappedBy = "senderId")
+     @JsonIgnore
+     List<Message> messages;
+}
+
