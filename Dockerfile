@@ -1,5 +1,5 @@
 # Dùng hình ảnh Java JRE chính thức
-FROM openjdk:17-jdk-slim
+FROM openjdk:21-jdk-slim
 
 # Đặt thư mục làm việc
 WORKDIR /app
