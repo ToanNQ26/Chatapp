@@ -5,7 +5,7 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Copy file jar đã build từ Maven/Gradle
-COPY services/chatapp-0.0.1-SNAPSHOT.jar app.jar
+COPY target/chatapp-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
