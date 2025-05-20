@@ -31,7 +31,7 @@ public class GlobalExceptionHandler {
         ApiResponse<String> apiResponse = new ApiResponse<>();
         apiResponse.setCode(erroCode.getCode());
         apiResponse.setMessage(erroCode.getMessageError());
-        apiResponse.setResult("Unknow handerError");
+        apiResponse.setResult("");
 
         return ResponseEntity.badRequest().body(apiResponse);
     }
@@ -41,7 +41,7 @@ public class GlobalExceptionHandler {
         // String enumkey = exception.getFieldError().getDefaultMessage();
         String enumkey = Optional.ofNullable(exception.getFieldError())
                             .map(FieldError::getDefaultMessage)
-                            .orElse("Unknow Error!");
+                            .orElse("Valid error!");
         ErrorCode erroCode = ErrorCode.INVALID_KEY;
 
         try {

@@ -2,19 +2,13 @@ package com.chat.chatapp.services;
 
 import org.springframework.stereotype.Service;
 
-import com.chat.chatapp.Exception.AppException;
-import com.chat.chatapp.Exception.ErrorCode;
 import com.chat.chatapp.dto.request.MessageRequest;
-import com.chat.chatapp.entity.ChatMessageEntity;
 import com.chat.chatapp.entity.Message;
-import com.chat.chatapp.model.ChatMessage;
-import com.chat.chatapp.repository.ChatMessageRepository;
 import com.chat.chatapp.repository.MessageRepository;
-import com.chat.chatapp.repository.UserRepository;
+//import com.chat.chatapp.repository.UserRepository;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
-import lombok.var;
 import lombok.experimental.FieldDefaults;
  
 @Service
@@ -23,9 +17,8 @@ import lombok.experimental.FieldDefaults;
 public class ChatService {
 
 
-    ChatMessageRepository chatMessageRepository;
     MessageRepository messageRepository;
-    UserRepository userRepository;
+    //UserRepository userRepository;
 
     public Message saveChatMessage(MessageRequest message) {
       

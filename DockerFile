@@ -5,7 +5,9 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy file jar đã build từ Maven/Gradle
-COPY target/chatapp-0.0.1-SNAPSHOT.jar app.jar
+COPY services/chatapp-0.0.1-SNAPSHOT.jar app.jar
+
+EXPOSE 8080
 
 # Cấu hình lệnh chạy ứng dụng
-ENTRYPOINT ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.jar"]

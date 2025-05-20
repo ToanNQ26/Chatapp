@@ -9,6 +9,7 @@ import com.chat.chatapp.dto.request.SendFriendRequest;
 import com.chat.chatapp.dto.response.ApiResponse;
 import com.chat.chatapp.entity.FriendRequest;
 import com.chat.chatapp.services.FriendRequestService;
+
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -21,6 +22,8 @@ public class FriendRequestController {
     // Gửi lời mời bạn bè
     @PostMapping()
     public ApiResponse<FriendRequest> sendFriendRequest(@RequestBody SendFriendRequest request) {
+
+        System.out.print("\n T:" + request);
         return ApiResponse.<FriendRequest>builder()
                         .message("Successly!")
                         .result(friendRequestService.sendFriendRequest(request))
@@ -37,10 +40,10 @@ public class FriendRequestController {
     }
 
     // Chấp nhận lời mời bạn bè
-    @PostMapping("/accept")
-    public ApiResponse<Boolean> acceptFriendRequest(@RequestBody SendFriendRequest request) {
+    @PostMapping("/{friendRequestId}/accept")
+    public ApiResponse<Boolean> acceptFriendRequest(@PathVariable Long friendRequestId) {
         return ApiResponse.<Boolean>builder()
-                        .result(friendRequestService.acceptFriendRequest(request))
+                        .result(friendRequestService.acceptFriendRequest(friendRequestId))
                         .build();
     }
 

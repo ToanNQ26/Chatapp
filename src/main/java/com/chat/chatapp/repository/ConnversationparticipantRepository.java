@@ -14,4 +14,5 @@ public interface ConnversationparticipantRepository extends JpaRepository<Conver
    void deleteByUserIdAndConversationId(String userId,String conversationId);
    List<Conversationparticipant> findAllByConversationId(String conversationId);
    Optional<Conversationparticipant> findByUserIdAndConversationId(String userId,String conversationId);
+   List<Conversationparticipant> findAllByConversationIdAndUserIdIn(String conversationId, List<String> userIds);
 }

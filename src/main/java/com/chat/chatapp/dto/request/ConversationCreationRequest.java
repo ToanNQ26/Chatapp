@@ -1,5 +1,7 @@
 package com.chat.chatapp.dto.request;
 
+import java.util.List;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,4 +17,5 @@ import lombok.experimental.FieldDefaults;
 public class ConversationCreationRequest {
     String conversationId;
     String name;
+    List<String> memberId;
 }

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.chat.chatapp.dto.request.BulkAddParticipantsRequest;
 import com.chat.chatapp.dto.request.ConversationCreationRequest;
 import com.chat.chatapp.dto.request.ConversationParticipantRequest;
 import com.chat.chatapp.dto.request.ConversationUpdateRequest;
@@ -76,6 +77,14 @@ public class ConversationController {
                            .result(true)
                            .build();
     }
+
+    @PostMapping("/listmembers")
+    public ApiResponse<Boolean> addMember(@RequestBody BulkAddParticipantsRequest request) {
+        return ApiResponse.<Boolean>builder()
+                           .message(conversationService.addMemberWithList(request))
+                           .result(true)
+                           .build();
+    } 
 
     // xóa thành viên trong nhóm, truyền vào id người dùng và id nhóm trong body
     @DeleteMapping("/members")

@@ -118,6 +118,12 @@ https://repo.maven.apache.org/maven2: PKIX path building failed: sun.security.pr
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+		<!-- phục vụ dtb postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.7.3</version>
+		</dependency>
 
 		<!--~~(org.springframework.boot:spring-boot-devtools failed. Unable to download metadata. Tried repositories:
 https://repo.maven.apache.org/maven2: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target)~~>--><!--~~(org.springframework.boot:spring-boot-devtools failed. Unable to download metadata. Tried repositories:

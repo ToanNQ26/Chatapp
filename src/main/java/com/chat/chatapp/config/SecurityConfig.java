@@ -62,7 +62,7 @@ public class SecurityConfig {
         return httpSecurity.build();
     }
 
-     @Bean
+    @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOriginPatterns(List.of("*")); // cho phép frontend

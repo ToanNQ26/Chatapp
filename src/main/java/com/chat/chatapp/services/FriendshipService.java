@@ -39,6 +39,10 @@ public class FriendshipService {
     return "Finally!";
     }
 
+    public boolean friendExists(String userId,String friendId) {
+        return friendshipRepository.findByUserIdAndFriendId(userId, friendId).isPresent();
+    }
+
     public boolean addtofriend(String userId, String friendId) {
 
         if(friendshipRepository.findByUserIdAndFriendId(userId, friendId).isPresent())

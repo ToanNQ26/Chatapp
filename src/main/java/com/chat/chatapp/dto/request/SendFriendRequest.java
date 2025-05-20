@@ -17,7 +17,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class SendFriendRequest {
     Long id;
-    String senderid;
-    String receiverid;
+    String senderId;
+    String receiverId;
     LocalDate createdAt;
 }

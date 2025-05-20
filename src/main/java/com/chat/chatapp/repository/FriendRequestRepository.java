@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.chat.chatapp.entity.FriendRequest;
 
 public interface FriendRequestRepository extends JpaRepository<FriendRequest,Long>{
-    Optional<FriendRequest> findBySenderidAndReceiverid(String senderId, String receiverId);
-    List<FriendRequest> findBySenderid(String senderId);
-    List<FriendRequest> findByReceiverid(String ReceiverId);
+    Optional<FriendRequest> findBySenderIdAndReceiverId(String senderId, String receiverId);
+    List<FriendRequest> findBySenderId(String senderId);
+    List<FriendRequest> findByReceiverId(String ReceiverId);
 }

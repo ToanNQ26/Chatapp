@@ -25,8 +25,8 @@ public class FriendRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
-    String senderid;
-    String receiverid;
+    String senderId;
+    String receiverId;
     @JsonFormat(pattern = "yyyy-MM-dd")
     LocalDate createdAt;
 }

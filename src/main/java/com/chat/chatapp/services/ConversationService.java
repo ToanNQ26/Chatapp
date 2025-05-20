@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.chat.chatapp.Exception.AppException;
 import com.chat.chatapp.Exception.ErrorCode;
+import com.chat.chatapp.dto.request.BulkAddParticipantsRequest;
 import com.chat.chatapp.dto.request.ConversationCreationRequest;
 import com.chat.chatapp.dto.request.ConversationParticipantRequest;
 import com.chat.chatapp.dto.request.ConversationUpdateRequest;
@@ -63,6 +64,11 @@ public class ConversationService {
                                                 //.conversationId(request.getConversationId())
                                                 .name(request.getName())
                                                 .build();
+                                                
+        BulkAddParticipantsRequest bRequest = BulkAddParticipantsRequest.builder()
+                                                                        .userId(request.getMemberId())
+                                                                        .build();
+        addMemberWithList(bRequest);
         return conversationRepository.save(conversation);
     }
 
@@ -100,25 +106,64 @@ public class ConversationService {
     }
 
     public String addMember(ConversationParticipantRequest request) {
-        conversationRepository.findById(request.getConversationId()).
-        orElseThrow(() -> new AppException(ErrorCode.CONVERSATION_NOT_EXISTED));
 
-        userRepository.findById(request.getUserId())
-        .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
+        var existed = repository.
+        findByUserIdAndConversationId(request.getUserId(), request.getConversationId());
 
-        Conversationparticipant conversationparticipant = Conversationparticipant.builder()
-                                                            .conversationId(request.getConversationId())
-                                                            .userId(request.getUserId())
-                                                            .build();
+
+        if(existed.isPresent()) 
+            throw new AppException(ErrorCode.USER_ALREADY_IN_GROUP);
+
+        if(!conversationRepository.existsById(request.getConversationId()))
+            throw new AppException(ErrorCode.CONVERSATION_NOT_EXISTED);
+
+        if(!userRepository.existsById(request.getUserId()))
+            throw new AppException(ErrorCode.USER_NOT_EXISTED);
+
+        
+
+        Conversationparticipant conversationparticipant 
+        = Conversationparticipant.builder()
+                                .conversationId(request.getConversationId())
+                                .userId(request.getUserId())
+                                .build();
         repository.save(conversationparticipant);
         return "Add Successly!";
+    }
+
+    public String addMemberWithList(BulkAddParticipantsRequest request) {
+        var exist = repository.findAllByConversationIdAndUserIdIn(request.getConversationId(), request.getUserId());
+
+        if(!exist.isEmpty())
+            throw new AppException(ErrorCode.USER_ALREADY_IN_GROUP);
+        
+        if (!conversationRepository.existsById(request.getConversationId())) {
+            throw new AppException(ErrorCode.CONVERSATION_NOT_EXISTED);
+        }
+
+        List<User> users = userRepository.findAllById(request.getUserId());
+        if (users.size() != request.getUserId().size()) {
+            throw new AppException(ErrorCode.USER_NOT_EXISTED);
+        }
+
+        List<Conversationparticipant> toAdd = request.getUserId().stream()
+            .map(userId -> Conversationparticipant.builder()
+                                .conversationId(request.getConversationId())
+                                .userId(userId)
+                                .build())
+            .collect(Collectors.toList());
+
+            repository.saveAll(toAdd);
+        return "Addsuccessly";
     }
 
     @Transactional
     public String deleteMember(ConversationParticipantRequest request) {
 
-        repository.findByUserIdAndConversationId(request.getUserId(), request.getConversationId())
+        repository
+        .findByUserIdAndConversationId(request.getUserId(), request.getConversationId())
         .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED_IN_GROUP));
+        
 
         conversationRepository.findById(request.getConversationId()).orElseThrow(() ->
         new AppException(ErrorCode.CONVERSATION_NOT_EXISTED));
@@ -170,4 +215,23 @@ public class ConversationService {
     
         return listUser;
     }
+
+    public List<Conversation> getConversationsWithOption(String userId, int optional) {
+        return conversationRepository.findConversationsWithParticipantsGreaterThan(optional);
+    }
+
+    // public List<Conversation> getConversationsWithoption(String userId,int optional) {
+    //     var listConversation = conversationRepository.findAll();
+    //     var LConversationId = listConversation.stream()
+    //                     .map(Conversation::getConversationId)
+    //                     .toList();
+    //     List<Conversation> highteroptional = new ArrayList<>();
+    //     for(String x : LConversationId) {
+    //         var listcheck = repository.findByConversationId(x);
+    //         if(listcheck.size() > optional) {
+    //             highteroptional.add(conversationRepository.findById(x).orElse(null));
+    //         }
+    //     }
+    //     return highteroptional;
+    // }
 }
