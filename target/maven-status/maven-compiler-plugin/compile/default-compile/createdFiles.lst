@@ -5,7 +5,6 @@ com\chat\chatapp\dto\request\FriendDelete.class
 com\chat\chatapp\entity\FriendRequest.class
 com\chat\chatapp\dto\response\IntrospectResponse$IntrospectResponseBuilder.class
 com\chat\chatapp\controller\ChatController.class
-com\chat\chatapp\entity\ChatMessageEntity$ChatMessageEntityBuilder.class
 com\chat\chatapp\services\FriendRequestService.class
 com\chat\chatapp\services\PasswordResetService.class
 com\chat\chatapp\dto\request\UpdatePasswordRequest$UpdatePasswordRequestBuilder.class
@@ -15,6 +14,8 @@ com\chat\chatapp\entity\Conversationparticipant$ConversationparticipantBuilder.c
 com\chat\chatapp\config\WebSocketConfig.class
 com\chat\chatapp\entity\Message.class
 com\chat\chatapp\dto\request\ConversationUpdateRequest$ConversationUpdateRequestBuilder.class
+com\chat\chatapp\services\ImageService.class
+com\chat\chatapp\config\StaticResourceConfig.class
 com\chat\chatapp\dto\request\IntrospectRequest.class
 com\chat\chatapp\dto\request\IntrospectRequest$IntrospectRequestBuilder.class
 com\chat\chatapp\mapper\UserMapper.class
@@ -25,13 +26,11 @@ com\chat\chatapp\Exception\AppException.class
 com\chat\chatapp\config\CorsConfig.class
 com\chat\chatapp\repository\PasswordResetTokenRepository.class
 com\chat\chatapp\enums\Role.class
-com\chat\chatapp\repository\ChatMessageRepository.class
 com\chat\chatapp\services\EmailService.class
 com\chat\chatapp\dto\response\ConversationResponeNotMessage.class
 com\chat\chatapp\dto\request\SendFriendRequest.class
 com\chat\chatapp\dto\request\BulkAddParticipantsRequest.class
 com\chat\chatapp\controller\EmailController.class
-com\chat\chatapp\entity\ChatMessageEntity.class
 com\chat\chatapp\dto\response\AuthenticationResponse.class
 com\chat\chatapp\repository\ConnversationparticipantRepository.class
 com\chat\chatapp\entity\User$UserBuilder.class
@@ -69,6 +68,7 @@ com\chat\chatapp\dto\request\BulkAddParticipantsRequest$BulkAddParticipantsReque
 com\chat\chatapp\entity\Conversation$ConversationBuilder.class
 com\chat\chatapp\repository\MessageRepository.class
 com\chat\chatapp\dto\request\SendFriendRequest$SendFriendRequestBuilder.class
+com\chat\chatapp\controller\imgcontroller.class
 com\chat\chatapp\dto\response\ApiResponse$ApiResponseBuilder.class
 com\chat\chatapp\controller\UserController.class
 com\chat\chatapp\entity\User.class

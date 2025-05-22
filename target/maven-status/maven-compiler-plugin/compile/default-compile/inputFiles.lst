@@ -1,6 +1,7 @@
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\ChatappApplication.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\CorsConfig.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\SecurityConfig.java
+C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\StaticResourceConfig.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\WebSocketConfig.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\AuthenticationController.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\ChatController.java
@@ -8,6 +9,7 @@ C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\ma
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\EmailController.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\FriendController.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\FriendRequestController.java
+C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\imgcontroller.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\UserController.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\AuthenticationRequest.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\BulkAddParticipantsRequest.java
@@ -29,7 +31,6 @@ C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\ma
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\ConversationResponeNotMessage.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\IntrospectResponse.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\MessageResponsedto.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\ChatMessageEntity.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\Conversation.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\Conversationparticipant.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\FriendRequest.java
@@ -45,7 +46,6 @@ C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\ma
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\mapper\FriendRequestMapper.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\mapper\UserMapper.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\model\ChatMessage.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\ChatMessageRepository.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\ConnversationparticipantRepository.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\ConversationRepository.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\FriendRequestRepository.java
@@ -60,5 +60,6 @@ C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\ma
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\EmailService.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\FriendRequestService.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\FriendshipService.java
+C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\ImageService.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\PasswordResetService.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\UserServices.java
