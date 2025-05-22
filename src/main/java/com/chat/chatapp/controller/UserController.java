@@ -37,6 +37,10 @@ public class UserController {
     public List<User> getUser() {
         return userServices.getUser();
     }
+    @GetMapping("/getUser/{id}")
+    public User getUserById(@PathVariable String id) {
+        return userServices.getUserbyId(id);
+    }
     @PostMapping("/update/{id}")
     public String updateUser(@PathVariable String id, @RequestBody UserUpdateRequest request) {
         return userServices.updateUser(id, request);

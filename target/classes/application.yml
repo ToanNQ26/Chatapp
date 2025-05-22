@@ -1,7 +1,7 @@
 # server:
 #     port: 8080
-#     servlet:
-#         context-path: /home
+    # servlet:
+    #     context-path: /home
 
 # spring:
 #     datasource: &jdbc

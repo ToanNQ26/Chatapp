@@ -38,7 +38,8 @@ public class User {
      String email;
      String phone;
      Date dateOfBirth; 
-     boolean isActive;    
+     boolean isActive; 
+     String avatar;   
 
      Set<String> roles;
 

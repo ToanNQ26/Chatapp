@@ -53,11 +53,11 @@ public class SecurityConfig {
         httpSecurity.csrf(AbstractHttpConfigurer::disable);
 
 
-        // httpSecurity.oauth2ResourceServer(oauth2 -> 
-        //     oauth2.jwt(jwtConfigurer ->
-        //             jwtConfigurer.decoder(jwtDecoder())
-        //             .jwtAuthenticationConverter(jwtAuthenticationConverter()))
-        // );
+        httpSecurity.oauth2ResourceServer(oauth2 -> 
+            oauth2.jwt(jwtConfigurer ->
+                    jwtConfigurer.decoder(jwtDecoder())
+                    .jwtAuthenticationConverter(jwtAuthenticationConverter()))
+        );
         
         return httpSecurity.build();
     }
