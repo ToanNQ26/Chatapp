@@ -31,12 +31,16 @@ public class FriendRequestService {
 
     public FriendRequest sendFriendRequest(SendFriendRequest request) {
 
+        if(request.getReceiverId().equals(request.getSenderId()))
+            throw new AppException(ErrorCode.CAN_NOT_SEND_TO_YOURSELF);
+
         if(friendshipService.friendExists(request.getSenderId(), request.getReceiverId()))
             throw new AppException(ErrorCode.FRIENDSHIP_EXISTED);
 
         if(friendRequestRepository.
         findBySenderIdAndReceiverId(request.getSenderId(), request.getReceiverId()).isPresent())
             throw new AppException(ErrorCode.FRIEND_REQUEST_EXISTED);
+
 
         uRepository.findById(request.getReceiverId())
         .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));

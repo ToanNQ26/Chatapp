@@ -18,6 +18,7 @@ public enum ErrorCode {
     FRIENDSHIP_NOT_EXISTED(1013,"Friendship not existed"),
     FRIENDSHIP_EXISTED(1014,"Friendship existes"),
     FRIEND_REQUEST_EXISTED(1015,"Friend request exist yet!"),
+    CAN_NOT_SEND_TO_YOURSELF(1016,"Cannot send to yourself!"),
 
 
     ERROR_LOAD_DATA(1100,"Error when load data"),

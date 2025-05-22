@@ -43,7 +43,7 @@ public class PasswordResetService {
         prt.setExpiryDate(LocalDateTime.now().plusMinutes(30));
         tokenRepo.save(prt);
 
-        String link = "http://localhost:8080/home/auth/reset-password?token=" + token;
+        String link = "https://chatappbyquoctoan.onrender.com/reset-password?token=" + token;
         String subject = "Reset your password";
         String body = "Click the following link to reset your password:\n" + link;
 
