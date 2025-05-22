@@ -64,12 +64,16 @@ public class ConversationService {
                                                 //.conversationId(request.getConversationId())
                                                 .name(request.getName())
                                                 .build();
+
+        var saveconversation = conversationRepository.save(conversation);
+        String conversationId = saveconversation.getConversationId();
                                                 
         BulkAddParticipantsRequest bRequest = BulkAddParticipantsRequest.builder()
+                                                                        .conversationId(conversationId)
                                                                         .userId(request.getMemberId())
                                                                         .build();
         addMemberWithList(bRequest);
-        return conversationRepository.save(conversation);
+        return saveconversation;
     }
 
     public Conversation updateConversation(String conversationId, ConversationUpdateRequest request) {
