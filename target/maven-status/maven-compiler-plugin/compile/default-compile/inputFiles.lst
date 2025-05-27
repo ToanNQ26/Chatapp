@@ -19,6 +19,7 @@ C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\ma
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\ConversationUpdateRequest.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\ForgotPasswordRequest.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\FriendDelete.java
+C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\GetConversationByListUserRequest.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\IntrospectRequest.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\MessageCreationRequest.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\MessageRequest.java
@@ -42,6 +43,7 @@ C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\ma
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\Exception\AppException.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\Exception\ErrorCode.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\Exception\GlobalExceptionHandler.java
+C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\listener\UserIdHandshakeInterceptor.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\listener\WebSocketEventListener.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\mapper\FriendRequestMapper.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\mapper\UserMapper.java

@@ -9,7 +9,6 @@ public enum ErrorCode {
     USER_EXISTED(1004, "User existed!"),
     UNAUTHENTICATED(1005,"Unauthenticated"),
     INVALID_KEY(1006, "Invalid key!"),
-    
     THIS_FIELD_CAN_NOT_EMPTY(1008,"This field can not empty"),
     USER_NOT_EXISTED_IN_GROUP(1009,"User not existed in group!"),
     FRIEND_REQUEST_DOES_NOT_EXISTED(1010,"Friend request does not exist yet!"),
@@ -19,6 +18,8 @@ public enum ErrorCode {
     FRIENDSHIP_EXISTED(1014,"Friendship existes"),
     FRIEND_REQUEST_EXISTED(1015,"Friend request exist yet!"),
     CAN_NOT_SEND_TO_YOURSELF(1016,"Cannot send to yourself!"),
+    NO_USERS_ARE_ONLINE(1017,"No users are online!"),
+    EMPTY(1018,"Empty"),
 
 
     ERROR_LOAD_DATA(1100,"Error when load data"),
@@ -26,7 +27,9 @@ public enum ErrorCode {
     TOKEN_NOT_EXISTED(1200,"Token not exited!"),
 
     CONVERSATION_NOT_EXISTED(1300,"Conversation_not_existed!"),
+    CONVERSATION_EXISTED(1300,"Conversation_existed!"),
     USER_ALREADY_IN_GROUP(1301,"User already in group"),
+
 
     USER_UNAUTHORIZED(1400, "User unauthorized!")
 

@@ -1,4 +1,5 @@
 com\chat\chatapp\controller\AuthenticationController.class
+com\chat\chatapp\dto\request\GetConversationByListUserRequest.class
 com\chat\chatapp\mapper\FriendRequestMapper.class
 com\chat\chatapp\controller\FriendRequestController.class
 com\chat\chatapp\dto\request\FriendDelete.class
@@ -31,6 +32,8 @@ com\chat\chatapp\dto\response\ConversationResponeNotMessage.class
 com\chat\chatapp\dto\request\SendFriendRequest.class
 com\chat\chatapp\dto\request\BulkAddParticipantsRequest.class
 com\chat\chatapp\controller\EmailController.class
+com\chat\chatapp\dto\request\GetConversationByListUserRequest$GetConversationByListUserRequestBuilder.class
+com\chat\chatapp\listener\WebSocketEventListener.class
 com\chat\chatapp\dto\response\AuthenticationResponse.class
 com\chat\chatapp\repository\ConnversationparticipantRepository.class
 com\chat\chatapp\entity\User$UserBuilder.class
@@ -78,6 +81,7 @@ com\chat\chatapp\dto\request\MessageCreationRequest$MessageCreationRequestBuilde
 com\chat\chatapp\entity\Conversation.class
 com\chat\chatapp\Exception\GlobalExceptionHandler.class
 com\chat\chatapp\repository\UserRepository.class
+com\chat\chatapp\listener\UserIdHandshakeInterceptor.class
 com\chat\chatapp\services\ConversationService.class
 com\chat\chatapp\entity\PasswordResetToken$PasswordResetTokenBuilder.class
 com\chat\chatapp\dto\request\CancleFriendRequest$CancleFriendRequestBuilder.class

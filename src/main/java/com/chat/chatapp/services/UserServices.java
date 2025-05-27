@@ -99,4 +99,25 @@ public class UserServices {
         return false;
     }
 
+    public List<User> getUserOnline() {
+        var listUser = userRepository.findByIsActive(true);
+        if (listUser.isEmpty()) 
+            throw new AppException(ErrorCode.NO_USERS_ARE_ONLINE);
+        return listUser;
+    }
+
+    public void setUserOnline(String userId) {
+        var user = userRepository.findByuserId(userId)
+        .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
+        user.setActive(true);
+        userRepository.save(user);
+    }
+
+    public void setUserOffine(String userId) {
+        var user = userRepository.findByuserId(userId)
+        .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
+        user.setActive(false);
+        userRepository.save(user);
+    }
+
 }

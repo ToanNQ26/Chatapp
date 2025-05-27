@@ -11,6 +11,7 @@ public interface UserMapper {
     @Mapping(target = "roles", ignore = true)
     @Mapping(target = "isActive", ignore = true)
     @Mapping(target = "messages", ignore = true)
+    @Mapping(target = "avatar", ignore = true)
     User toUser(UsercreationRequest request);
     
 } 

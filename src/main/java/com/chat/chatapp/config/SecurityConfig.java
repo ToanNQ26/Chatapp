@@ -33,7 +33,7 @@ import lombok.experimental.FieldDefaults;
 public class SecurityConfig {
 
     final String[] Public_endPoints = {
-        "/User", "/auth/token", "/auth/introspect" 
+        "/User", "/auth/token", "/auth/introspect", "/forgot-password", "/reset-password", 
     };
 
     @Value("${jwt.singer_key}")
@@ -45,7 +45,8 @@ public class SecurityConfig {
         httpSecurity.authorizeHttpRequests(request -> 
                         request.requestMatchers(HttpMethod.POST, Public_endPoints).permitAll()
                         .requestMatchers(HttpMethod.POST, "/User/password").permitAll()
-                        .anyRequest().permitAll() //authenticated()
+                        .requestMatchers("/chat-websocket/**").permitAll()
+                        .anyRequest().authenticated() //authenticated()
                         );
 
         httpSecurity.cors(cors -> cors.configurationSource(corsConfigurationSource()));

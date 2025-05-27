@@ -11,6 +11,7 @@ import com.chat.chatapp.dto.request.BulkAddParticipantsRequest;
 import com.chat.chatapp.dto.request.ConversationCreationRequest;
 import com.chat.chatapp.dto.request.ConversationParticipantRequest;
 import com.chat.chatapp.dto.request.ConversationUpdateRequest;
+import com.chat.chatapp.dto.request.GetConversationByListUserRequest;
 import com.chat.chatapp.dto.response.ConversationResponeNotMessage;
 import com.chat.chatapp.entity.Conversation;
 import com.chat.chatapp.entity.Conversationparticipant;
@@ -60,6 +61,19 @@ public class ConversationService {
     }
 
     public Conversation createdConversation(ConversationCreationRequest request) {
+
+        if(request.getMemberId().isEmpty())
+            throw new AppException(ErrorCode.EMPTY);
+
+        if (request.getMemberId().size() == 2) {
+        var foundConversationIds = repository
+        .findConversationIdsByExactParticipants(request.getMemberId(), request.getMemberId().size());
+
+        if (!foundConversationIds.isEmpty()) {
+            throw new AppException(ErrorCode.CONVERSATION_EXISTED);
+        }
+    }
+
         Conversation conversation = Conversation.builder()
                                                 //.conversationId(request.getConversationId())
                                                 .name(request.getName())
@@ -224,18 +238,16 @@ public class ConversationService {
         return conversationRepository.findConversationsWithParticipantsGreaterThan(optional);
     }
 
-    // public List<Conversation> getConversationsWithoption(String userId,int optional) {
-    //     var listConversation = conversationRepository.findAll();
-    //     var LConversationId = listConversation.stream()
-    //                     .map(Conversation::getConversationId)
-    //                     .toList();
-    //     List<Conversation> highteroptional = new ArrayList<>();
-    //     for(String x : LConversationId) {
-    //         var listcheck = repository.findByConversationId(x);
-    //         if(listcheck.size() > optional) {
-    //             highteroptional.add(conversationRepository.findById(x).orElse(null));
-    //         }
-    //     }
-    //     return highteroptional;
-    // }
+    public Conversation getConversationByListUser(GetConversationByListUserRequest request) {
+        long memberCount = request.getUserId().size();
+        List<String> conversationIds = repository.findConversationIdsByExactParticipants(request.getUserId(), memberCount);
+
+        if (conversationIds.isEmpty()) {
+            throw new AppException(ErrorCode.EMPTY);
+        }
+
+        var conversation = conversationRepository.findById(conversationIds.get(0))
+        .orElseThrow(() -> new AppException(ErrorCode.CONVERSATION_NOT_EXISTED));
+        return conversation;
+    }
 }

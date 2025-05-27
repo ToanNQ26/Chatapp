@@ -18,4 +18,13 @@ public interface ConversationRepository extends JpaRepository<Conversation, Stri
     HAVING COUNT(cp.id) > :optional
     """, nativeQuery = true)
     List<Conversation> findConversationsWithParticipantsGreaterThan(@Param("optional") int optional); 
+    
+    @Query(value = """
+    SELECT c.*
+    FROM conversation c
+    JOIN conversationparticipant cp ON c.conversation_id = cp.conversation_id
+    GROUP BY c.conversation_id
+    HAVING COUNT(cp.id) = :optional
+    """, nativeQuery = true)
+    List<Conversation> getConversationByOption(@Param("optional") int optional);
 }

@@ -57,5 +57,11 @@ public class UserController {
                 .result(userServices.deleteUser(id))
                 .build();
     }
+    @GetMapping("/online")
+    public ApiResponse<List<User>> getUserOnline() {
+        return ApiResponse.<List<User>>builder()
+                        .result(userServices.getUserOnline())
+                        .build();
+    }
 }
 

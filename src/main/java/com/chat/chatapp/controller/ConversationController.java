@@ -16,6 +16,7 @@ import com.chat.chatapp.dto.request.BulkAddParticipantsRequest;
 import com.chat.chatapp.dto.request.ConversationCreationRequest;
 import com.chat.chatapp.dto.request.ConversationParticipantRequest;
 import com.chat.chatapp.dto.request.ConversationUpdateRequest;
+import com.chat.chatapp.dto.request.GetConversationByListUserRequest;
 import com.chat.chatapp.dto.response.ApiResponse;
 import com.chat.chatapp.dto.response.ConversationResponeNotMessage;
 import com.chat.chatapp.dto.response.MessageResponsedto;
@@ -134,7 +135,7 @@ public class ConversationController {
                                     .result(conversationService.getConversationByUserIdWithoutMessage(id))
                                     .build();
             }
-
+    // Lấy thành viên trong group
     @GetMapping("/members/{id}")
     public ApiResponse<List<User>> getMember_in_group(@PathVariable String id) {
         return ApiResponse.<List<User>>builder()
@@ -142,4 +143,22 @@ public class ConversationController {
                         .result(conversationService.getMember(id))
                         .build();
     }
+
+    @GetMapping("/{id}/option")
+    public ApiResponse<List<Conversation>> getConversationHigherTwoMember(@PathVariable String id)
+    {
+        return ApiResponse.<List<Conversation>>builder()
+                        .message("Successly!")
+                        .result(conversationService.getConversationsWithOption(id, 2))
+                        .build();
+    }
+    @GetMapping("option2")
+    public ApiResponse<Conversation> 
+    getConversationByListUserId(@RequestBody GetConversationByListUserRequest request)
+    {
+        return ApiResponse.<Conversation>builder()
+                        .result(conversationService.getConversationByListUser(request))
+                        .build();
+    }
+
 }

@@ -31,7 +31,7 @@ public class ChatService {
                               .timeStamp(message.getTimeStamp())
                               .content(message.getContent())
                               .build();
-        return messageRepository.save(messageSave);
+        return messageRepository.save(messageSave); 
    }
 
    public String saveMessage(Message message) {

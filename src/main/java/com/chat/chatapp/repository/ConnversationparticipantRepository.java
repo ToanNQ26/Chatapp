@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import com.chat.chatapp.entity.Conversationparticipant;
 
@@ -15,4 +17,16 @@ public interface ConnversationparticipantRepository extends JpaRepository<Conver
    List<Conversationparticipant> findAllByConversationId(String conversationId);
    Optional<Conversationparticipant> findByUserIdAndConversationId(String userId,String conversationId);
    List<Conversationparticipant> findAllByConversationIdAndUserIdIn(String conversationId, List<String> userIds);
+
+   @Query(value = """
+    SELECT cp.conversation_id
+    FROM conversationparticipant cp
+    GROUP BY cp.conversation_id
+    HAVING 
+        COUNT(*) = :size 
+        AND COUNT(CASE WHEN cp.user_id IN (:userIds) THEN 1 END) = :size
+    """, nativeQuery = true)
+   List<String> findConversationIdsByExactParticipants(@Param("userIds") List<String> userIds, @Param("size") long size);
+
+
 }
