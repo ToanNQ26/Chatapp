@@ -249,7 +249,7 @@ public class ConversationService {
     }
 
     public List<Conversation> getConversationsWithOption(String userId, int optional) {
-        return conversationRepository.findConversationsWithParticipantsGreaterThan(optional);
+        return conversationRepository.findConversationsWithParticipantsGreaterThanAndUserJoined(optional, userId);
     }
 
     public Conversation getConversationByListUser(GetConversationByListUserRequest request) {

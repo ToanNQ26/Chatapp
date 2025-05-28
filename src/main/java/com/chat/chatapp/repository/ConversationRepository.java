@@ -10,21 +10,29 @@ import com.chat.chatapp.entity.Conversation;
 
 public interface ConversationRepository extends JpaRepository<Conversation, String>{
 
-   @Query(value = """
-    SELECT c.*
-    FROM conversation c
-    JOIN conversationparticipant cp ON c.conversation_id = cp.conversation_id
-    GROUP BY c.conversation_id
-    HAVING COUNT(cp.id) > :optional
-    """, nativeQuery = true)
-    List<Conversation> findConversationsWithParticipantsGreaterThan(@Param("optional") int optional); 
-    
+//    @Query(value = """
+//     SELECT c.*
+//     FROM conversation c
+//     JOIN conversationparticipant cp ON c.conversation_id = cp.conversation_id
+//     GROUP BY c.conversation_id
+//     HAVING COUNT(cp.id) > :optional
+//     """, nativeQuery = true)
+//     List<Conversation> findConversationsWithParticipantsGreaterThan(@Param("optional") int optional); 
+
     @Query(value = """
     SELECT c.*
     FROM conversation c
     JOIN conversationparticipant cp ON c.conversation_id = cp.conversation_id
-    GROUP BY c.conversation_id
-    HAVING COUNT(cp.id) = :optional
+    WHERE c.conversation_id IN (
+        SELECT cp2.conversation_id
+        FROM conversationparticipant cp2
+        GROUP BY cp2.conversation_id
+        HAVING COUNT(cp2.id) > :optional
+    )
+    AND cp.user_id = :userId
     """, nativeQuery = true)
-    List<Conversation> getConversationByOption(@Param("optional") int optional);
+    List<Conversation> findConversationsWithParticipantsGreaterThanAndUserJoined(
+    @Param("optional") int optional,
+    @Param("userId") String userId
+    );
 }
