@@ -37,7 +37,7 @@ public class SecurityConfig {
     };
 
     final String[] Public_Get = {
-        "/images/**"
+        "/images/**" , "/reset-password"
     };
 
     @Value("${jwt.singer_key}")
