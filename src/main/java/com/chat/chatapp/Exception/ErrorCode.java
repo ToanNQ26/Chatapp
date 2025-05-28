@@ -25,6 +25,7 @@ public enum ErrorCode {
     ERROR_LOAD_DATA(1100,"Error when load data"),
 
     TOKEN_NOT_EXISTED(1200,"Token not exited!"),
+    TOKEN_EXISTED(1201,"Token_existed"),
 
     CONVERSATION_NOT_EXISTED(1300,"Conversation_not_existed!"),
     CONVERSATION_EXISTED(1300,"Conversation_existed!"),

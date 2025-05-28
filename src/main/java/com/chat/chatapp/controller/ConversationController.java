@@ -152,7 +152,7 @@ public class ConversationController {
                         .result(conversationService.getConversationsWithOption(id, 2))
                         .build();
     }
-    @GetMapping("option2")
+    @PostMapping("option2")
     public ApiResponse<Conversation> 
     getConversationByListUserId(@RequestBody GetConversationByListUserRequest request)
     {

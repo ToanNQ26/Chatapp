@@ -56,6 +56,13 @@ public class ConversationService {
         return false;
     }
 
+    public boolean checkConversationWithOptional(List<String> userId, long size) {
+        var foundConversationIds = repository.findConversationIdsByExactParticipants(userId, size);
+        if(!foundConversationIds.isEmpty())
+            return true;
+        return false;
+    }
+
     public List<Conversation> getAllConversation() {
         return conversationRepository.findAll();
     }
@@ -66,12 +73,8 @@ public class ConversationService {
             throw new AppException(ErrorCode.EMPTY);
 
         if (request.getMemberId().size() == 2) {
-        var foundConversationIds = repository
-        .findConversationIdsByExactParticipants(request.getMemberId(), request.getMemberId().size());
-
-        if (!foundConversationIds.isEmpty()) {
+        if(checkConversationWithOptional(request.getMemberId(), request.getMemberId().size()))
             throw new AppException(ErrorCode.CONVERSATION_EXISTED);
-        }
     }
 
         Conversation conversation = Conversation.builder()
@@ -178,13 +181,24 @@ public class ConversationService {
     @Transactional
     public String deleteMember(ConversationParticipantRequest request) {
 
+        conversationRepository.findById(request.getConversationId()).orElseThrow(() ->
+        new AppException(ErrorCode.CONVERSATION_NOT_EXISTED));
+
         repository
         .findByUserIdAndConversationId(request.getUserId(), request.getConversationId())
         .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED_IN_GROUP));
         
+        String conversationId = request.getConversationId();
+        if(repository.countByConversationId(conversationId) == 3 ) {
+            var listMember = getMember(conversationId);
+            var listMemberId = listMember.stream()
+            .map(User::getUserId)
+            .collect(Collectors.toList());
 
-        conversationRepository.findById(request.getConversationId()).orElseThrow(() ->
-        new AppException(ErrorCode.CONVERSATION_NOT_EXISTED));
+            listMemberId.remove(request.getUserId());
+            if(checkConversationWithOptional(listMemberId, listMemberId.size()))
+                throw new AppException(ErrorCode.CONVERSATION_EXISTED);
+        }
 
         repository.deleteByUserIdAndConversationId(request.getUserId(), request.getConversationId());
         return "Delete Successly!"; 

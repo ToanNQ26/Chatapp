@@ -34,6 +34,10 @@ public class PasswordResetService {
         User user = userRepository.findByemail(email)
                     .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
 
+        var tokencheck = tokenRepo.findByUser(user);
+        if(tokencheck.isPresent()) 
+            throw new AppException(ErrorCode.TOKEN_EXISTED);
+
 
         String token = UUID.randomUUID().toString();
 

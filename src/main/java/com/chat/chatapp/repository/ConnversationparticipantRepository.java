@@ -28,5 +28,8 @@ public interface ConnversationparticipantRepository extends JpaRepository<Conver
     """, nativeQuery = true)
    List<String> findConversationIdsByExactParticipants(@Param("userIds") List<String> userIds, @Param("size") long size);
 
+   long countByConversationId(String conversationId);
+
+
 
 }

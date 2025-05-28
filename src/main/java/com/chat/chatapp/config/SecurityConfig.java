@@ -36,6 +36,10 @@ public class SecurityConfig {
         "/User", "/auth/token", "/auth/introspect", "/forgot-password", "/reset-password", 
     };
 
+    final String[] Public_Get = {
+        "/images/**"
+    };
+
     @Value("${jwt.singer_key}")
     private String signerKey;
 
@@ -45,8 +49,9 @@ public class SecurityConfig {
         httpSecurity.authorizeHttpRequests(request -> 
                         request.requestMatchers(HttpMethod.POST, Public_endPoints).permitAll()
                         .requestMatchers(HttpMethod.POST, "/User/password").permitAll()
+                        .requestMatchers(HttpMethod.GET, Public_Get).permitAll()
                         .requestMatchers("/chat-websocket/**").permitAll()
-                        .anyRequest().authenticated() //authenticated()
+                        .anyRequest().authenticated() 
                         );
 
         httpSecurity.cors(cors -> cors.configurationSource(corsConfigurationSource()));

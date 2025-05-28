@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;
 
-
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -34,6 +34,6 @@ public class Conversation {
     String name;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "conversationId")
+    @OneToMany(mappedBy = "conversationId", cascade = CascadeType.ALL, orphanRemoval = true)
     List<Message>  messages;
 }
