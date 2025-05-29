@@ -31,6 +31,9 @@ public class UserServices {
 
     public User createUser(UsercreationRequest request){
 
+        if(request.getPhone()==null || request.getEmail()==null || request.getPassword()==null)
+            throw new AppException(ErrorCode.NOT_VALID_DATA);
+
         if(userRepository.findByPhone(request.getPhone()).isPresent())
             throw new AppException(ErrorCode.USER_EXISTED);
         

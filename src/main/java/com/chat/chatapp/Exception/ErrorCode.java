@@ -20,6 +20,7 @@ public enum ErrorCode {
     CAN_NOT_SEND_TO_YOURSELF(1016,"Cannot send to yourself!"),
     NO_USERS_ARE_ONLINE(1017,"No users are online!"),
     EMPTY(1018,"Empty"),
+    NOT_VALID_DATA(1019,"Not valid Data!"),
 
 
     ERROR_LOAD_DATA(1100,"Error when load data"),
