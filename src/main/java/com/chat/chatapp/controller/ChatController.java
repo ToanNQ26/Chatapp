@@ -33,15 +33,6 @@ public class ChatController {
         simpMessagingTemplate.convertAndSend("/topic/messages/" + message.getConversationId().getConversationId(), message); //chatService.saveMessage(message));
     }
 
-    
-    // @MessageMapping("/sendMessage")
-    // @SendTo("/topic/messages")
-    // public ChatMessage sendMessage(ChatMessage message) {
-    //     System.out.println("Received: " + message);
-    //     chatService.saveChatMessage(message);
-    //     return message;
-    // }
-
 
     @MessageMapping("/leave")
     @SendTo("/topic/messages")

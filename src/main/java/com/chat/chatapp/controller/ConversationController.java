@@ -105,16 +105,6 @@ public class ConversationController {
                             .build();
     }
 
-    // lấy hội thoại theo id của người dùng, có chứa tin nhắn
-    // @GetMapping("/{userId}")
-    // public ApiResponse<List<Conversation>> getListConversation(@PathVariable String userId) {
-
-    //     System.err.println(userId);
-    //     return ApiResponse.<List<Conversation>>builder()
-    //                         .result(conversationService.getConversationIdByUserId(userId))
-    //                         .build();
-    // }
-
     // lấy tin nhắn trong hội thoại với id hội thoại
     @GetMapping("/{id}/messages") 
     public ApiResponse<List<MessageResponsedto>> getMessageByGroupId(@PathVariable String id) {

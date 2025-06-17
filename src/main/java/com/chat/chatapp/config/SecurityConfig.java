@@ -33,7 +33,7 @@ import lombok.experimental.FieldDefaults;
 public class SecurityConfig {
 
     final String[] Public_endPoints = {
-        "/User", "/auth/token", "/auth/introspect", "/forgot-password", "/reset-password", 
+        "/User", "/auth/token", "/auth/introspect", "/forgot-password", "/reset-password","User/register" 
     };
 
     final String[] Public_Get = {
@@ -48,7 +48,6 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests(request -> 
                         request.requestMatchers(HttpMethod.POST, Public_endPoints).permitAll()
-                        .requestMatchers(HttpMethod.POST, "/User/password").permitAll()
                         .requestMatchers(HttpMethod.GET, Public_Get).permitAll()
                         .requestMatchers("/chat-websocket/**").permitAll()
                         .anyRequest().authenticated() 
