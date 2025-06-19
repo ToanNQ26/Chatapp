@@ -25,6 +25,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
     @Autowired
     private UserServices userServices;
+
+    @PostMapping()
+    public String keepAliveSystem() {
+        return "Alive";
+    }
+
     @PostMapping("/register")
     public User UserRequestRegister(@RequestBody UsercreationRequest request) {
         return userServices.createUser(request); 
