@@ -26,6 +26,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class UserServices {
 
+    ConversationService conversationService;
     UserRepository userRepository;
     UserMapper userMapper;
 
@@ -47,7 +48,10 @@ public class UserServices {
         roles.add(Role.USER.name());
         user.setRoles(roles);
 
-        return userRepository.save(user);
+        var saveUser = userRepository.save(user);
+        conversationService.AddMemberToGllobal(user);
+
+        return saveUser;
     }
 
     public User getUserbyId(String id) {

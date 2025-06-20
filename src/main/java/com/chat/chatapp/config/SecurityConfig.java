@@ -33,7 +33,7 @@ import lombok.experimental.FieldDefaults;
 public class SecurityConfig {
 
     final String[] Public_endPoints = {
-        "/User", "/auth/token", "/auth/introspect", "/forgot-password", "/reset-password","User/register" 
+        "/User", "/auth/token", "/auth/introspect", "/forgot-password", "/reset-password","/User/register" 
     };
 
     final String[] Public_Get = {

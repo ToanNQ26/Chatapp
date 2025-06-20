@@ -11,6 +11,7 @@ C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\ma
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\FriendRequestController.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\imgcontroller.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\UserController.java
+C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\DefaultStart\StartupRunner.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\AuthenticationRequest.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\BulkAddParticipantsRequest.java
 C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\CancleFriendRequest.java

@@ -96,3 +96,4 @@ com\chat\chatapp\dto\request\ForgotPasswordRequest$ForgotPasswordRequestBuilder.
 com\chat\chatapp\model\ChatMessage.class
 com\chat\chatapp\config\SecurityConfig.class
 com\chat\chatapp\mapper\UserMapperImpl.class
+com\chat\chatapp\DefaultStart\StartupRunner.class

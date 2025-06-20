@@ -32,12 +32,13 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 
 public class ConversationService {
+
     ConversationRepository conversationRepository;
     ConnversationparticipantRepository repository;
     UserRepository userRepository;
     MessageRepository mRepository;
 
-    // Các hàm không phụ trợ
+    // Các hàm phụ trợ
 
     public ConversationResponeNotMessage mapToNotMessage(Conversation conversation) {
         return ConversationResponeNotMessage.builder()
@@ -45,9 +46,6 @@ public class ConversationService {
                                             .name(conversation.getName())
                                             .build();
     }
-
-
-    //Các hàm chính sử dụng trong controller
 
     public boolean checkConversationExisted(String conversationId) {
         if(conversationRepository.findById(conversationId).isPresent()) {
@@ -57,11 +55,37 @@ public class ConversationService {
     }
 
     public boolean checkConversationWithOptional(List<String> userId, long size) {
-        var foundConversationIds = repository.findConversationIdsByExactParticipants(userId, size);
+        var foundConversationIds = repository.
+        findConversationIdsByExactParticipants(userId, size);
         if(!foundConversationIds.isEmpty())
             return true;
         return false;
     }
+
+    public void checkGlobalConversation() {
+        var check = conversationRepository.findByName("Tất cả mọi người");
+
+        if(check.isPresent()) return;
+        var conversationGlobal = Conversation.builder()
+                                .name("Tất cả mọi người")
+                                .build();
+        conversationRepository.save(conversationGlobal);
+    }
+
+    public void AddMemberToGllobal(User member) {
+        var globalConversation = conversationRepository.
+        findByName("Tất cả mọi người");
+
+        String conversationId = globalConversation.get().getConversationId();
+        var addMember = ConversationParticipantRequest.builder()
+                    .conversationId(conversationId)
+                    .userId(member.getUserId())
+                    .build();
+        this.addMember(addMember);
+    }
+
+    //Các hàm chính sử dụng trong controller
+
 
     public List<Conversation> getAllConversation() {
         return conversationRepository.findAll();
@@ -69,7 +93,7 @@ public class ConversationService {
 
     public Conversation createdConversation(ConversationCreationRequest request) {
 
-        if(request.getMemberId().isEmpty())
+        if(request.getMemberId() == null || request.getMemberId().isEmpty()) 
             throw new AppException(ErrorCode.EMPTY);
 
         if (request.getMemberId().size() == 2) {
@@ -126,31 +150,31 @@ public class ConversationService {
                 .collect(Collectors.toList());
     }
 
-    public String addMember(ConversationParticipantRequest request) {
+        public String addMember(ConversationParticipantRequest request) {
 
-        var existed = repository.
-        findByUserIdAndConversationId(request.getUserId(), request.getConversationId());
+            var existed = repository.
+            findByUserIdAndConversationId(request.getUserId(), request.getConversationId());
 
 
-        if(existed.isPresent()) 
-            throw new AppException(ErrorCode.USER_ALREADY_IN_GROUP);
+            if(existed.isPresent()) 
+                throw new AppException(ErrorCode.USER_ALREADY_IN_GROUP);
 
-        if(!conversationRepository.existsById(request.getConversationId()))
-            throw new AppException(ErrorCode.CONVERSATION_NOT_EXISTED);
+            if(!conversationRepository.existsById(request.getConversationId()))
+                throw new AppException(ErrorCode.CONVERSATION_NOT_EXISTED);
 
-        if(!userRepository.existsById(request.getUserId()))
-            throw new AppException(ErrorCode.USER_NOT_EXISTED);
+            if(!userRepository.existsById(request.getUserId()))
+                throw new AppException(ErrorCode.USER_NOT_EXISTED);
 
-        
+            
 
-        Conversationparticipant conversationparticipant 
-        = Conversationparticipant.builder()
-                                .conversationId(request.getConversationId())
-                                .userId(request.getUserId())
-                                .build();
-        repository.save(conversationparticipant);
-        return "Add Successly!";
-    }
+            Conversationparticipant conversationparticipant 
+            = Conversationparticipant.builder()
+                                    .conversationId(request.getConversationId())
+                                    .userId(request.getUserId())
+                                    .build();
+            repository.save(conversationparticipant);
+            return "Add Successly!";
+        }
 
     public String addMemberWithList(BulkAddParticipantsRequest request) {
         var exist = repository.findAllByConversationIdAndUserIdIn(request.getConversationId(), request.getUserId());

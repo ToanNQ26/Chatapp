@@ -8,6 +8,7 @@ import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -43,7 +44,8 @@ public class User {
 
      Set<String> roles;
 
-     @OneToMany(mappedBy = "senderId")
+     @OneToMany(mappedBy = "senderId", cascade = CascadeType.REMOVE, orphanRemoval = true)
+     //@OneToMany(mappedBy = "senderId")
      @JsonIgnore
      List<Message> messages;
 }

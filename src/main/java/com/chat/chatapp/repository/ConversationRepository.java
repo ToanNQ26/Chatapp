@@ -1,6 +1,7 @@
 package com.chat.chatapp.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -35,4 +36,5 @@ public interface ConversationRepository extends JpaRepository<Conversation, Stri
     @Param("optional") int optional,
     @Param("userId") String userId
     );
+    Optional<Conversation> findByName(String name);
 }
