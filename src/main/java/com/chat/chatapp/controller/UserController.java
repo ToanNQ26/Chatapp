@@ -52,8 +52,8 @@ public class UserController {
         return userServices.updateUser(id, request);
     }
     @PostMapping("/password")
-    public ApiResponse<Boolean> updatePassword(@RequestBody UpdatePasswordRequest request) {
-        return ApiResponse.<Boolean>builder()
+    public ApiResponse<String> updatePassword(@RequestBody UpdatePasswordRequest request) {
+        return ApiResponse.<String>builder()
                 .result(userServices.updatePassword(request))
                 .build();
     }    

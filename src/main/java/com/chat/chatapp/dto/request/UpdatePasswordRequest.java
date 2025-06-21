@@ -15,4 +15,6 @@ import lombok.experimental.FieldDefaults;
 public class UpdatePasswordRequest {
     String userId;
     String password;
+    String newPassword;
+    String confirmPassword;
 }

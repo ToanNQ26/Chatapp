@@ -96,14 +96,25 @@ public class UserServices {
         return "Xóa thành công";
     }
 
-    public boolean updatePassword(UpdatePasswordRequest request) {
+    public String updatePassword(UpdatePasswordRequest request) {
         var user = userRepository.findByuserId(request.getUserId())
         .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_EXISTED));
-        userRepository.save(user);
-        if(userRepository.existsById(user.getUserId()))
-            return true;
+
+        if(!request.getNewPassword().equals(request.getConfirmPassword()))
+            throw new AppException(ErrorCode.INVALID_KEY);
+
+        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
+
+        boolean authenticated = passwordEncoder.matches(request.getPassword(), user.getPassword());
+
+        if(!authenticated) 
+            throw new AppException(ErrorCode.UNAUTHENTICATED);
+
+        user.setPassword(passwordEncoder.encode(request.getNewPassword()));
         
-        return false;
+        userRepository.save(user);
+        
+        return "Upđate thành công!";
     }
 
     public List<User> getUserOnline() {
