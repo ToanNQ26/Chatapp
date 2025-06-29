@@ -29,7 +29,6 @@ public class ChatController {
         System.out.println("Receive: " + message.getContent());
         //chatService.saveMessage(message);
         chatService.saveChatMessage(message);
-
         simpMessagingTemplate.convertAndSend("/topic/messages/" + message.getConversationId().getConversationId(), message); //chatService.saveMessage(message));
     }
 

@@ -1,6 +1,6 @@
 package com.chat.chatapp.dto.request;
 
-import java.sql.Date;
+import java.util.Date;
 
 import com.chat.chatapp.entity.Conversation;
 import com.chat.chatapp.entity.User;
