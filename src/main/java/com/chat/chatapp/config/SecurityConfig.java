@@ -70,7 +70,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOriginPatterns(List.of("*")); // cho phép frontend
+        config.setAllowedOriginPatterns(List.of("https://chatappbyquoctoan.netlify.app")); // cho phép frontend
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE"));
         config.setAllowedHeaders(List.of("*")); // cho phép tất cả header
         config.setAllowCredentials(true); // nếu cần gửi cookie

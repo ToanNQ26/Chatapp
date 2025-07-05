@@ -1,68 +1,68 @@
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\ChatappApplication.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\CorsConfig.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\SecurityConfig.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\StaticResourceConfig.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\WebSocketConfig.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\AuthenticationController.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\ChatController.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\ConversationController.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\EmailController.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\FriendController.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\FriendRequestController.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\imgcontroller.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\UserController.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\DefaultStart\StartupRunner.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\AuthenticationRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\BulkAddParticipantsRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\CancleFriendRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\ConversationCreationRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\ConversationParticipantRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\ConversationUpdateRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\ForgotPasswordRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\FriendDelete.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\GetConversationByListUserRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\IntrospectRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\MessageCreationRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\MessageRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\SendFriendRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\UpdatePasswordRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\UsercreationRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\UserUpdateRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\ApiResponse.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\AuthenticationResponse.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\ConversationResponeNotMessage.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\IntrospectResponse.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\MessageResponsedto.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\Conversation.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\Conversationparticipant.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\FriendRequest.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\Friendship.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\Message.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\PasswordResetToken.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\User.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\enums\Role.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\Exception\AppException.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\Exception\ErrorCode.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\Exception\GlobalExceptionHandler.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\listener\UserIdHandshakeInterceptor.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\listener\WebSocketEventListener.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\mapper\FriendRequestMapper.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\mapper\UserMapper.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\model\ChatMessage.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\ConnversationparticipantRepository.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\ConversationRepository.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\FriendRequestRepository.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\FriendshipRepository.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\MessageRepository.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\PasswordResetTokenRepository.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\UserRepository.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\security\CurrentUserProvider.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\AuthenticationService.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\ChatService.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\ConversationService.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\EmailService.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\FriendRequestService.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\FriendshipService.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\ImageService.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\PasswordResetService.java
-C:\Users\asus\Documents\Lap trinh java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\UserServices.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\ChatappApplication.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\CorsConfig.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\SecurityConfig.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\StaticResourceConfig.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\config\WebSocketConfig.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\AuthenticationController.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\ChatController.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\ConversationController.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\EmailController.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\FriendController.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\FriendRequestController.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\imgcontroller.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\controller\UserController.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\DefaultStart\StartupRunner.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\AuthenticationRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\BulkAddParticipantsRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\CancleFriendRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\ConversationCreationRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\ConversationParticipantRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\ConversationUpdateRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\ForgotPasswordRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\FriendDelete.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\GetConversationByListUserRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\IntrospectRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\MessageCreationRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\MessageRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\SendFriendRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\UpdatePasswordRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\UsercreationRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\request\UserUpdateRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\ApiResponse.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\AuthenticationResponse.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\ConversationResponeNotMessage.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\IntrospectResponse.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\dto\response\MessageResponsedto.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\Conversation.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\Conversationparticipant.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\FriendRequest.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\Friendship.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\Message.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\PasswordResetToken.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\entity\User.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\enums\Role.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\Exception\AppException.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\Exception\ErrorCode.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\Exception\GlobalExceptionHandler.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\listener\UserIdHandshakeInterceptor.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\listener\WebSocketEventListener.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\mapper\FriendRequestMapper.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\mapper\UserMapper.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\model\ChatMessage.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\ConnversationparticipantRepository.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\ConversationRepository.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\FriendRequestRepository.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\FriendshipRepository.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\MessageRepository.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\PasswordResetTokenRepository.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\repository\UserRepository.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\security\CurrentUserProvider.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\AuthenticationService.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\ChatService.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\ConversationService.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\EmailService.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\FriendRequestService.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\FriendshipService.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\ImageService.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\PasswordResetService.java
+C:\Users\asus\Documents\File_Java\SpringBoot\Appchat\ChatApp_backend\src\main\java\com\chat\chatapp\services\UserServices.java
